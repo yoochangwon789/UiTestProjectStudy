@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- margin 은 부모 View 로부터 얼만큼 떨어질 것인가 -->
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="200dp"
+        android:text="안녕하세요"
+        android:background="#03A9F4"/>
+
+    <!-- padding 은 자기 자신 범위에서 여백을 정하는 것 -->
+    <!-- padding 만 사용하게 되면 위 아래 오른 왼 모든 범위를 준 효과-->
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="30dp"
+        android:text="안녕하세요"
+        android:background="#F44336"/>
+
+    <!-- margin 자체의 기능은 위 아래 오른 왼 모든 범위를 준 효과 -->
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="100dp"
+        android:background="#FFEB3B"/>
+
+</LinearLayout>

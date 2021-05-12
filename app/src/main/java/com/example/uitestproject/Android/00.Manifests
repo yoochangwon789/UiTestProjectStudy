@@ -1,0 +1,33 @@
+android Menifests
+
+Menifests 는 프로젝트의 지도역할을 한다.
+어떤 화면이 있는지 각각의 화면들이 어떠한 기능들을 하는지 파악할 수 있다.
+package 가 있는데 package 명이라고 적혀있는데 패키지 명은 고유한 이름을 가져야 한다.
+
+application 이 있는데 앱의 대한 내용을 적는 곳이다
+android:allowBackup 은 앱을 사용할 때 로그인이나 좋아요 등 앱을 지웠고 다시 다운했을 때 로그인도 되어있고
+좋아요도 기록되어있다 android:allowBackup 기능 때문이다 >> true 로 정의 되어있을 때
+
+android:icon 은 앱의 아이콘의 이미지를 선택하는 곳
+
+android:label 앱 이름
+
+android:roundIcon
+핸드폰마다 앱의 모양을 그리는 것이 다르다 이것을 설정 하게 되면 아이콘이 둥근경우의 핸드폰일 때
+이것을 사용하게 된다
+
+android:supportsRtl
+Rtl >> Right to Left 글을 읽을 때 보통같으면 왼쪽에서 오른쪽으로 읽는데 아닌 나라들도 존재한다 그런 나라들을 위해서
+오른쪽에서 왼쪽으로 읽을 때 true 옵션을 적용해 내용이 뒤집혀서 나오기 때문에 우리가 따로 설정을 해주지 않아도 된다
+
+android:theme
+맨위의 테마 부분을 설정할 수 있다
+
+<activity> 화면이라고 생각하면 된다
+
+<intent-filter>
+
+category android:name="android.intent.category.LAUNCHER" 화면을 켰을 때 최초로 뜨게 하는 화면을
+LAUNCHER activity 로 정의 한다
+
+test

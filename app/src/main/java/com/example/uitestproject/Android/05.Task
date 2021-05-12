@@ -1,0 +1,33 @@
+
+
+
+05. Task -> Activity
+
+-> Stack : 햄버거 처럼 아래에서 위로 쌓이는 것
+    - Task 가 쌓인다
+
+중요!!
+ex)                              다중허용     A
+A -----> B -----> C -----> B -----> A -----> B
+         A        B        A        B        다중허용 X
+                  A                 A
+
+켜지는 방법을 자체 속성으로 가지고 있는경우
+-> manifests 에있는 launchMode 을 사용
+
+켜지는 방법을 지시하는 경우
+-> IntentFlag 을 사용
+
+LaunchMode 의 4종류       다중허용
+- Standard                  O
+- singleTop               조건부 -> 열려고 하는 Activity 가 현재 엑티비티라면 onNewIntent 를 호출한다
+                                   현재 액티비티를 또 열지 않는다.
+-----------------------------
+- singleTask                X
+- singleInstance            X
+
+인텐트 플레그
+FLAG_ACTIVITY_NEW_TASK
+FLAG_ACTIVITY_SINGLE_TOP
+FLAG_ACTIVITY_CLEAR_TOP
+등등 여러가지

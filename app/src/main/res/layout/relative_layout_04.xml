@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- RelativeLayout 상대적으로 자식뷰의 위치를 정해준다
+         상대적은 기준 이 필요함 >> 부모뷰 기준, 특정한 뷰 기준 오른쪽 왼쪽 위 아래 등 기준을 가지고 움직임-->
+
+    <!-- Parent 부모를 기준 삼아 가운데로 이동 -->
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#E91E63"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#E91E63"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#E91E63"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#E91E63"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#03A9F4"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#FF5722"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="#FF5722"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>

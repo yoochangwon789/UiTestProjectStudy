@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- RelativeLayout 자식 뷰들을 겹칠수 있다 -->
+    <!-- RelativeLayout 와 FrameLayout 사용 할 때 겹치는 부분은 FrameLayout 을 사용하자
+     RelativeLayout 은 기준(상대적)을 두고 그것에 맞게 연산을 많이 하기 때문에 속도가 느리다
+     FrameLayout 은 원래부터 뷰들을 겹치는 목적으로 사용하는 레이아웃이기 때문에 되도록
+     FrameLayout 으로 사용하자 -->
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#3F51B5"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#9C27B0"/>
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#4CAF50"/>
+
+</RelativeLayout>

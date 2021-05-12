@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 고해상도 저해상도 이미지를 핸드폰 마다 출력할 수 있는 결과가 다르다
+    핸드폰 성능에 따라서 이미지가 보일수도 있고 보이지 않을 수도 있다 해상도가 다르기 때문-->
+
+    <!-- 그래서 해상도별로 나눠줄 수 있다
+     - 저해상도 핸드폰은 >> 저해상도 이미지를 가져다 쓰고
+     - 중해상도 핸드폰은 >> 증해상도 이미지를 가져다 쓰고
+     - 고해상도 핸드폰은 >> 고해상도 이미지를 가져다 쓰면 된다 -->
+
+    <!-- 이미지를 해상도 별로 만들어준다 -->
+    <!-- 이미지를 해상도 별로 만들어 주면 안드로이드가 알아서 자기에 핸드폰에 맞게 이미지를
+     찾아서 쓴다-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#F44336"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dog_9"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:background="#F44336"
+        android:scaleType="centerCrop"
+        android:src="@drawable/lilka"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/youtube"/>
+
+
+
+</LinearLayout>
