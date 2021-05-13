@@ -20,24 +20,50 @@ class SharedPreference : AppCompatActivity() {
         // - MODE_MULTI_PROCESS : 이미 호출되어 사용중인지 체크
         // - MODE_APPEND : 기존 preference 에 신규로 추가
         // SharedPreference 에 저장하는 방법
-        val sharedPreference = getSharedPreferences("sp1", MODE_PRIVATE)
+        //val sharedPreference = getSharedPreferences("sp1", MODE_PRIVATE)
 
         // sharedPreference 데이터를 넣으려면 데이터를 넣어줄 수 있는 editor 가 필요
         // sharedPreference 를 editor 로 가져와서 데이터를 넣어줘야 한다
-        val editor: SharedPreferences.Editor = sharedPreference.edit()
-        editor.putString("hello", "안녕하세요")
-        editor.commit()
+        //val editor: SharedPreferences.Editor = sharedPreference.edit()
+        //editor.putString("hello", "안녕하세요")
+        // editor.commit()
 
         // sp1 -> SharedPreference
         //        (Key,Value) -> ("Hello", "안녕하세요")
         // sp2 -> SharedPreference
         //        (Key,Value) -> ("Hello", "안녕하세요11")
 
-        button_sp1.setOnClickListener {
+        save_btn.setOnClickListener {
+            val sharedPreference = getSharedPreferences("sp1", MODE_PRIVATE)
+            val editor: SharedPreferences.Editor = sharedPreference.edit()
+            editor.putString("hello", "안녕하세요")
+            editor.putString("goodbye", "안녕히가세요")
+            editor.commit()
+        }
+
+        load_btn.setOnClickListener {
             // SharedPreference 에 값을 불러오는 방법
             val sharedPreference = getSharedPreferences("sp1", MODE_PRIVATE)
-            val value = sharedPreference.getString("hello", "데이터 없음")
-            Log.d("key-value", "Value : " + value)
+            val value1 = sharedPreference.getString("hello", "데이터 없음1")
+            val value2 = sharedPreference.getString("goodbye", "데이터 없음2")
+            Log.d("key-value", "Value1 : " + value1)
+            Log.d("key-value", "Value2 : " + value2)
+        }
+
+        delete_btn.setOnClickListener {
+            val sharedPreference = getSharedPreferences("sp1", MODE_PRIVATE)
+            val editor = sharedPreference.edit()
+            // remove -> 특정 값만 지우기
+            editor.remove("hello")
+            editor.commit()
+        }
+
+        delete_all.setOnClickListener {
+            val sharedPreference = getSharedPreferences("sp1", MODE_PRIVATE)
+            val editor = sharedPreference.edit()
+            // clear -> 전체 데이터 지우기
+            editor.clear()
+            editor.commit()
         }
     }
 }
