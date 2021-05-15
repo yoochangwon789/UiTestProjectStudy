@@ -19,6 +19,7 @@ class RealmActivity : AppCompatActivity() {
         // 동기화 라는 것은 예를 들어 테이블의 필드가 추가 되었을 때를 말하고 데이터 베이스의 틀이 바뀌었을 때
         val config: RealmConfiguration = RealmConfiguration.Builder()
             .deleteRealmIfMigrationNeeded()
+            .allowWritesOnUiThread(true)
             .build()
 
         // Realm set 해주기

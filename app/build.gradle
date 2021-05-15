@@ -35,9 +35,9 @@ android {
     }
 }
 
-realm {
-    syncEnabled = true
-}
+//realm {
+//    syncEnabled = true
+//}
 
 dependencies {
 
