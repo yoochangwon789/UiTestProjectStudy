@@ -21,10 +21,10 @@
 
 안드로이드에서 Async 다루는 방법
     - AsyncTask 상속받는다
-        -> OnPreExcute      : 쓰레드 출발하기전에 할 작업
+        -> OnPreExecute      : 쓰레드 출발하기전에 할 작업
         -> doIntBackground  : 쓰레드가 할 작업
         -> onProgressUpdate : 작업하는 중간 중간에 메인 쓰레드로 온다
-        -> onPostExcute     : 작업을 다 마친후 메인 쓰레드로 온다
+        -> onPostExecute     : 작업을 다 마친후 메인 쓰레드로 온다
 
 Async 의 장점
     - Main Thread 기다리게 할 필요가 없다
