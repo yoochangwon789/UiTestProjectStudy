@@ -1,16 +1,39 @@
 package com.example.uitestproject
 
+import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ProgressBar
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_async.*
 import java.lang.Exception
 
 class AsyncActivity : AppCompatActivity() {
+
+    var task: BackgroundAsyncTest? = null
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_async)
+
+        start.setOnClickListener {
+            task = BackgroundAsyncTest(progress_bar, ment)
+            task?.execute()
+        }
+
+        stop.setOnClickListener {
+            //task?.cancel(true)
+            startActivity(Intent(this, Intent2::class.java))
+        }
+    }
+
+    // Async 는 Activity 가 종료되도 멈추지 않기 때문에 라이프 싸이클을 이용해 정지시켜줘야 함
+    override fun onPause() {
+        task?.cancel(true)
+        super.onPause()
     }
 }
 
@@ -34,6 +57,7 @@ class BackgroundAsyncTest(
         // 완료가 되어 있지 않다면 반복 즉 취도되지 않았다면
         while (isCancelled() == false) {
             percent++
+            Log.d("percent", "persent : " + percent)
             if (percent > 100) break
             // main Thread 로 보내 주는 역할
             else publishProgress(percent)
