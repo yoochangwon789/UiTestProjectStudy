@@ -1,0 +1,22 @@
+
+
+
+18. Network
+
+-> 통신
+
+DataBase <----> Server <----> Client(app, web, ...)
+   글                            A
+   댓글                          B
+
+
+Local DataBase 의 한계
+- 동기화가 어렵다
+- 상호작용이 불가능 하다
+
+
+서버와 통신하는 방법
+- 해당 url 로 요청한다
+- 인증정보를 보낸다
+- JSON 형식을 사용한다 data 를 보낸다
+-
