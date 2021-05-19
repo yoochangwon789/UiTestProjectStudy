@@ -19,4 +19,22 @@ Local DataBase 의 한계
 - 해당 url 로 요청한다
 - 인증정보를 보낸다
 - JSON 형식을 사용한다 data 를 보낸다
--
+- JavaScript Object Notation -> JavaScript 에서 객체를 만들 때 사용하는 표현식 이다
+
+JSON 형식
+- [] -> List
+- {} -> 객체
+
+Json Parsing
+-> Json 을 코틀린이나 자바가 이해할 수 있게 변형하는 것
+
+Serializable (직렬화)
+-> 자바 시스템 내부에서 사용되는 object 를 외부에서 사용할 수 있도록 Byte 형태로 데이터 변환
+
+코틀린이나/ 자바가 이해할 수 있는 틀
+class Person(
+    var id: Int? = null
+    var name: String? = null
+    var age: Int? = null
+    var intro: String? = null
+)
