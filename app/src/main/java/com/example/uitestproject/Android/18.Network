@@ -38,3 +38,9 @@ class Person(
     var age: Int? = null
     var intro: String? = null
 )
+
+Request Type
+- GET       -> 정보 요청
+- POST      -> 정보 추가 요청
+- DELETE    -> 정보 삭제 요청
+- PUT       -> 정보 수정 요청
