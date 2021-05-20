@@ -24,7 +24,9 @@
         <activity android:name=".RealmActivity"></activity>
         <activity android:name=".SharedPreference" />
         <activity android:name=".TabPager2Activity" />
-        <activity android:name=".TabPagerActivity" />
+        <activity android:name=".TabPagerActivity" >
+
+        </activity>
         <activity android:name=".RecyclerViewActivity" />
         <activity android:name=".ListViewActivity" />
         <activity android:name=".LibraryActivityGlide" />
