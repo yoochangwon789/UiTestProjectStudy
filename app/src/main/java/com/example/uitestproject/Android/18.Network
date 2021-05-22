@@ -44,3 +44,8 @@ Request Type
 - POST      -> 정보 추가 요청
 - DELETE    -> 정보 삭제 요청
 - PUT       -> 정보 수정 요청
+
+네트워크 통신의 관한 라이브러리
+Library
+- Volley
+- Retrofit

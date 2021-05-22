@@ -54,7 +54,7 @@ class BackgroundAsyncTest(
 
     // vararg -> int 가 여러개 올 수 있다
     override fun doInBackground(vararg params: Int?): Int {
-        // 완료가 되어 있지 않다면 반복 즉 취도되지 않았다면
+        // 완료가 되어 있지 않다면 반복 즉 취소되지 않았다면
         while (isCancelled() == false) {
             percent++
             Log.d("percent", "persent : " + percent)
